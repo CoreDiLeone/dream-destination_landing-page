@@ -1,4 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+    --dark-blue: #1F2433;
+    --deep-orange: #E55A2A;
+    --deep-blue: #2B59AE;
+    --warm-white: #FFFDF8;
+    --srk-blue-transparent: #1F243399;
+    --font-inter: "Inter", sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
+    color: var(--warm-white);
+    font-family: var(--font-inter) ;
+    box-sizing: border-box;
+}
+main{
+    margin: 0 auto; 
+}
+
+.fixed-background{
+    
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('./images/buildings-unsplash.jpg') center no-repeat;
+      background-size: cover;
+      z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+/*Styles for Navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    padding: 10px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav-brand{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 200;
+}
+.nav-brand-text{
+    margin-left: 5px;
+    font-weight: bolder;
+}
+.btn-menu, .close-menu{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-menu {
+    font-size: 45px;
+}
+.bi-airplane{
+   font-size: 45px;
+    transform: rotate(40deg); 
+   
+}
+.dropdown-menu{
+    background-color: var(--dark-blue);
+    width: 100vw;         /* 100% del ancho de la ventana */
+    height: 100vh;        /* 100% del alto de la ventana */
+    position: fixed;      /* Se fija a la ventana, no al nav */
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    display: none;
+
+}
+.dropdown-menu ul{
+    list-style: none;
+    margin: 200px 20px;
+
+}
+.dropdown-menu ul li{
+    padding: 30px;
+    white-space: nowrap;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.close-menu{
+    font-size: 38px;
+    align-self: flex-start;
+    padding-top: 10px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+/*Styles for main section/ hero section*/
+
+.main{
+    margin: 10vh 20px;
+     height: 80vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    
+}
+.main-section-container{
+    margin: 20px;
+     max-width: 450px;
+}
+.main__section-title{
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+.main__section-text{
+    margin-bottom: 25px;
+    /*text-wrap: pretty;*/
+    font-size: 18px;
+}
+.main__section-btn{
+    background-color: var(--deep-orange);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-weight: bolder;
+    font-size: 16px;
+    align-self: self-start ;
+}
+.main__section-icons{
+
+    display: none;
+}
+
+/*Styles for about us section*/
+.about{
+    margin: 20px;
+    max-width: 450px;
+    margin: auto;
+}
+.about__container{
+    height: 45vh;
+    text-align: center;
+    background-color: var(--srk-blue-transparent);
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 18px;
+    margin-bottom: 8vh;
+    margin-inline: 20px;
+}
+.about__title{
+    font-size: 32px;
+}
+.about__subtitle{
+    font-size: 20px;
+}
+/*Styles for card of about us*/
+.about__cards-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 20px;
+    gap: 60px;
+}
+.about__card{
+    background-color: var(--srk-blue-transparent);
+    display: flex;
+    border-radius: 20px;
+    padding: 15px;
+}
+.about__card div{
+    margin-left: 15px;
+}
+.about__card i{
+    color: var(--deep-orange);
+    font-size: 50px;
+    align-self: center;
+}
+
+/*Styles for our team section*/
+
+.ourteam{
+    margin-top: 28vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.ourteam__title{
+    margin-bottom: 30px;
+}
+.ourteam__container{
+    margin-inline: 15px;
+   padding: 20px;
+   background-color: var(--srk-blue-transparent);
+   border-radius: 30px;
+   width: 350px;
+}
+.ourteam__image{
+    margin: 15px 10px ;
+    width: 200px;
+}
+.ourteam__title-card{
+    font-size: 18px;
+}
+.ourteam__subtitle-card{
+    padding: 10px 12px;
+    background-color: var(--warm-white);
+    color: var(--dark-blue);
+    border-radius: 30px;
+    font-size: 16px;
+    margin: 20px;
+}
+
+/*Styles for contact us section*/
+.contactus{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: 20px;
+    margin-top: 28vh;
+}
+.contactus__title, .contactus__subtitle{
+    margin-bottom: 20px;
+}
+.contactus__title{
+    font-size: 28px;
+}
+.contactus__form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 450px;
+}
+.contactus__form input, textarea{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--srk-blue-transparent);
+    border: none;
+    border-radius: 30px;
+}
+textarea{
+    border-radius: 15px;
+}
+label{
+    visibility: hidden;
+}
+.contactus__btn{
+    background-color: var(--deep-orange);
+    margin: 25px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    color: var(--warm-white);
+    font-weight: bolder;
+}
+.contactus__form input::placeholder, textarea::placeholder{
+    color: #fffdf8d4;
+}
+
+/*Style for footer*/
+.footer{
+    margin-top: 28vh;
+    background-color: var(--dark-blue);
+    display: flex;
+    font-size: 12px;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+.footer__title{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer__title p, h5{
+    font-style: italic;
+    color: #fffdf8ca;
+}
+.footer__title h5{
+    font-size: 13px;
+}
+.footer__links{
+    display: flex;
+}
+.footer__links ul{
+    list-style: none;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+.footer__links ul li, a{
+    line-height: 25px;
+    color: #fffdf8ca;
+}
+.footer__links ul li:first-child{
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.scrolled{
+    background-color: var(--dark-blue);
 }
