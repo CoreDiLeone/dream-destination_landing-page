@@ -4,12 +4,10 @@ const btnMenu = document.getElementById("btn-menu");
 
 
 btnClose.addEventListener("click", function(){
-
-    dropdownMenu.style.display = "none";
+    dropdownMenu.classList.toggle("show")
 })
 btnMenu.addEventListener("click", function(){
-    dropdownMenu.style.display = "flex";
-    btnMenu
+   dropdownMenu.classList.toggle("show")
 })
 
 
