@@ -17,7 +17,7 @@ const navbar = document.getElementById('scrolled-nav');
 const handlerScroll = () =>{
 
     const scrollPosition = window.scrollY;
-    console.log(scrollPosition);
+   
     if(scrollPosition > 0){
         navbar.classList.add('scrolled');
     }else{
