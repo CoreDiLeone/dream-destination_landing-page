@@ -286,12 +286,17 @@ textarea {
   background-color: var(--srk-blue-transparent);
   border: none;
   border-radius: 30px;
+  font-weight: 600;
 }
 textarea {
   border-radius: 15px;
 }
 label {
   visibility: hidden;
+}
+input:focus , textarea:focus{
+  background-color: var(--warm-white);
+  color: var(--dark-blue);
 }
 .contactus__btn {
   background-color: var(--deep-orange);
